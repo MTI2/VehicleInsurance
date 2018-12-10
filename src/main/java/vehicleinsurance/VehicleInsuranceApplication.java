@@ -26,6 +26,12 @@ public class VehicleInsuranceApplication
     {
         //HIHIHIHIHI XDDDDDDDDDDDDDDDDDDDDD
         boolean Dominik_zna_GitHuba = false;
+        //   ^
+        //   |
+        //   |
+        //   |
+        //   |
+        // ej paczta turej :D
         SpringApplication.run(VehicleInsuranceApplication.class, args);
 
 
