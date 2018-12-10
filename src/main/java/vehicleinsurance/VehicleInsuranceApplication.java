@@ -24,7 +24,7 @@ public class VehicleInsuranceApplication
 
     public static void main(String[] args)
     {
-
+        boolean DominikZnaGitHuba = false;
         SpringApplication.run(VehicleInsuranceApplication.class, args);
 
 
