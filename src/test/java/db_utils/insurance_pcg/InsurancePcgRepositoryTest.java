@@ -54,10 +54,15 @@ public class InsurancePcgRepositoryTest
     @Test
     public void When_SelectedByShortNameTest1_Exept_NotNullReturned()
     {
-        Optional<Contract> ret = null;
+        Optional<InsurancePcg> ret = null;
+        ret = ir.findByShortName("Test1");
+
+        //to by sprawdzilo czy optional jest nullem
+        //Assert.assertNotNull(ir.findByShortName("Test1"));
+
 
         //TODO:<-- Wstawić kod wybierania pakietu po krótkiej nazwie Test1 -->
-
+        //to sprawdza czy w optionalu cos jest
         Assert.assertTrue(ret.isPresent());
     }
 
