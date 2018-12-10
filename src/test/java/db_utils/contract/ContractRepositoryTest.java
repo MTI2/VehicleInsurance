@@ -8,11 +8,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 import vehicleinsurance.VehicleInsuranceApplication;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +29,7 @@ public class ContractRepositoryTest
 
     @Autowired
     ContractRepository cr;
+
     @Autowired
     StorageTypeRepository sr;
 
@@ -59,6 +63,11 @@ public class ContractRepositoryTest
     {
         List<Contract> ret = null;
 
+
+
+
+        ret = cr.findAllByDateBetween(saved.getDate(),saved.getDate());
+
         //TODO:<------ tu wstawic kod listowania po zakresie daty od-do --------->
         //TODO:<------ jezeli wylistuje się od wczoraj do jutra, baza zwróci przynajmniej jeden rekord --------->
         //TODO:<------ bo dodawany jest jeden rekord z dzisiejszą datą przy inicjalizacji tego testu --------->
@@ -81,7 +90,9 @@ public class ContractRepositoryTest
     public void When_FindingByClientTokenTest1_Except_OneContractReturned()
     {
         Optional<Contract> ret = null;
-        ret = sr.findAllByToken()
+
+
+        ret = cr.findOneByClientToken(saved.getClientToken());
         //TODO:<------ tu wstawic kod wybierania po tokenie klienta, token klienta wstawionego do bazy dla testu to Test1 --------->
 
         Assert.assertTrue(ret.isPresent());
@@ -92,8 +103,10 @@ public class ContractRepositoryTest
     public void When_ListingByClientTokenTest1_Except_AtLeastOneContractReturned()
     {
         List<Contract> ret = null;
+        ret = cr.findAllByClientToken(saved.getClientToken());
 
         //TODO:<------ tu wstawic kod szukania po tokenie klienta, token klienta wstawionego do bazy dla testu to Test1 --------->
+
 
         Assert.assertFalse(ret.isEmpty());
     }
