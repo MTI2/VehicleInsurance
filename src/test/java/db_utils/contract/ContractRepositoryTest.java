@@ -81,7 +81,7 @@ public class ContractRepositoryTest
     public void When_FindingByClientTokenTest1_Except_OneContractReturned()
     {
         Optional<Contract> ret = null;
-
+        ret = sr.findAllByToken()
         //TODO:<------ tu wstawic kod wybierania po tokenie klienta, token klienta wstawionego do bazy dla testu to Test1 --------->
 
         Assert.assertTrue(ret.isPresent());
