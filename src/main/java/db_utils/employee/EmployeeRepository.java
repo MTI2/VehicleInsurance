@@ -9,4 +9,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>
 {
      boolean existsByLoginAndHash(String login, String hash);
      boolean existsByLogin(String login);
+
+     Employee getByName(String name);
 }

@@ -24,9 +24,6 @@ public class VehicleInsuranceApplication
 
     public static void main(String[] args)
     {
-        /*adjkgbhkadsg*/
         SpringApplication.run(VehicleInsuranceApplication.class, args);
-
-
     }
 }

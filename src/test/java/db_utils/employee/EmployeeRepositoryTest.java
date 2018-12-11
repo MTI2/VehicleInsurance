@@ -62,7 +62,7 @@ public class EmployeeRepositoryTest
     {
         String salt = "";
 
-        //TODO:<-- Tu wstawic kod wybierania soli użytkownika po jego nazwie użytkownika -->
+        salt = er.getByName("Test1").getSalt();
 
         Assert.assertEquals("Salt does not match 'Test1'!",  "Test1", salt );
     }
