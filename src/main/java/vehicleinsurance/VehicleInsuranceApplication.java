@@ -21,7 +21,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "db_utils.storage_type"})
 public class VehicleInsuranceApplication
 {
-
+    boolean DominkToNajlepszyProgramista = true;
     public static void main(String[] args)
     {
         SpringApplication.run(VehicleInsuranceApplication.class, args);
