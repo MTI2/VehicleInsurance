@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-
+//Hello from de ader sajd
 
 @SpringBootApplication
 @EntityScan(basePackages = {"db_utils.employee",
