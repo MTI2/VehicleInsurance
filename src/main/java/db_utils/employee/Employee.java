@@ -32,9 +32,6 @@ public class Employee
     @Column(nullable = false)
     private String hash;
 
-    @Column(nullable = false)
-    private String salt;
-
     public long getId()
     {
         return id;
@@ -100,13 +97,4 @@ public class Employee
         this.hash = hash;
     }
 
-    public String getSalt()
-    {
-        return salt;
-    }
-
-    public void setSalt(String salt)
-    {
-        this.salt = salt;
-    }
 }

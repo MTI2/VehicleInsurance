@@ -3,7 +3,6 @@ package vehicleinsurance;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
@@ -20,12 +19,25 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "db_utils.insurance_pcg",
         "db_utils.packages",
         "db_utils.storage_type"})
-@ComponentScan(basePackages = { "employee"} )
 public class VehicleInsuranceApplication
 {
 
     public static void main(String[] args)
     {
+<<<<<<< .merge_file_a02816
+        /*adjkgbhkadsg*/
+=======
+        //HIHIHIHIHI XDDDDDDDDDDDDDDDDDDDDD
+        boolean Dominik_zna_GitHuba = false;
+        //   ^
+        //   |
+        //   |
+        //   |
+        //   |
+        // ej paczta turej :D
+>>>>>>> .merge_file_a04712
         SpringApplication.run(VehicleInsuranceApplication.class, args);
+
+
     }
 }

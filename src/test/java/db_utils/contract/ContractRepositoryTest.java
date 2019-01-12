@@ -1,6 +1,6 @@
 package db_utils.contract;
 
-import db_utils.storage_type.StorageTypeRepository;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -30,9 +30,6 @@ public class ContractRepositoryTest
     @Autowired
     ContractRepository cr;
 
-    @Autowired
-    StorageTypeRepository sr;
-
 
     @Before
     public void init()
@@ -46,7 +43,6 @@ public class ContractRepositoryTest
         c.setVin("Test1");
         c.setRequestToken("Test1");
         c.setPlateNumber("Test1");
-        c.setStroageType(sr.findAll().get(0));
         c.setDate(Date.valueOf(LocalDate.now()));
         saved = cr.save(c);
     }

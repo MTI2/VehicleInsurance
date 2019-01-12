@@ -11,4 +11,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>
      boolean existsByLogin(String login);
 
      Employee getByName(String name);
+     Employee getByLogin(String login);
 }

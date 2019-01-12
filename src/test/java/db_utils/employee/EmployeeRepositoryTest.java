@@ -31,7 +31,6 @@ public class EmployeeRepositoryTest
         e.setMail("Test1");
         e.setName("Test1");
         e.setPhoneNumber(0);
-        e.setSalt("Test1");
         e.setSurname("Test1");
 
         saved = er.save(e);
@@ -57,14 +56,6 @@ public class EmployeeRepositoryTest
         Assert.assertTrue( er.existsByLogin("Test1") );
     }
 
-    @Test
-    public void When_QueriedForUserTest1Salt_Except_Test1SaltReturned()
-    {
-        String salt = "";
 
-        salt = er.getByName("Test1").getSalt();
-
-        Assert.assertEquals("Salt does not match 'Test1'!",  "Test1", salt );
-    }
 
 }

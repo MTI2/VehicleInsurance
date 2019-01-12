@@ -1,8 +1,7 @@
 package db_utils.contract;
 
 
-import db_utils.insurance_pcg.InsurancePcg;
-import db_utils.storage_type.StorageType;
+
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -43,14 +42,8 @@ public class Contract
     @Column
     private String plateNumber;
 
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name = "id", insertable = false, updatable = false)
-    private StorageType stroageType;
-
-
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name = "id", insertable = false, updatable = false)
-    private InsurancePcg insurancePcg;
+    @Column
+    private String insurancePcg;
 
     @Column
     private String storageName;
@@ -101,15 +94,6 @@ public class Contract
         this.brand = brand;
     }
 
-    public StorageType getStroageType()
-    {
-        return stroageType;
-    }
-
-    public void setStroageType(StorageType stroageType)
-    {
-        this.stroageType = stroageType;
-    }
 
     public String getStorageName()
     {
@@ -121,12 +105,12 @@ public class Contract
         this.storageName = storageName;
     }
 
-    public InsurancePcg getInsurancePcg()
+    public String getInsurancePcg()
     {
         return insurancePcg;
     }
 
-    public void setInsurancePcg(InsurancePcg insurancePcg)
+    public void setInsurancePcg(String insurancePcg)
     {
         this.insurancePcg = insurancePcg;
     }
@@ -170,4 +154,6 @@ public class Contract
     {
         this.requestToken = requestToken;
     }
+
+
 }
