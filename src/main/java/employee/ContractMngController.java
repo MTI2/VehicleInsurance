@@ -472,7 +472,7 @@ public class ContractMngController
     }
 
 
-    @RequestMapping(value = "/contract/extend", method = RequestMethod.GET)
+    @RequestMapping(value = "/contract/extend", method = RequestMethod.POST)
     String extend(@RequestParam("token") String token,
                   @RequestParam("contract_id") String contract_id,
                   HttpServletResponse response)
