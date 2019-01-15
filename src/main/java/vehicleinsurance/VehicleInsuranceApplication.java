@@ -20,7 +20,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "db_utils.insurance_pcg",
         "db_utils.packages",
         "db_utils.storage_type"})
-@ComponentScan(basePackages = { "employee"} )
+@ComponentScan(basePackages = { "employee", "conract"} )
 public class VehicleInsuranceApplication
 {
 

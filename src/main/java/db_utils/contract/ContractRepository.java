@@ -12,6 +12,8 @@ import java.util.Optional;
 @Repository
 public interface ContractRepository extends JpaRepository<Contract, Long>
 {
+    Contract save(Contract contract);
+    
     Optional<Contract> findOneByClientToken(String tokenId);
 
     List<Contract> findAllByClientToken(String tokenId);
